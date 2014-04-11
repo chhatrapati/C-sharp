@@ -5,6 +5,6 @@ var apiUrl = "http://webscrapemaster.com/api/?url=http://motyar.blogspot.com&xpa
 var jsonString = new WebClient().DownloadString(apiUrl);
 
 //Convert JSON to DataSet
-DataSet myDataSet= JsonConvert.Deserialize<DataSet>(jsonString);
+DataSet myDataSet= JsonConvert.DeserializeObject<DataSet>(jsonString);
 
 //Use DataSet in your code
